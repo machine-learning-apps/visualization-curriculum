@@ -1,3 +1,3 @@
 #!bin/bash
 
-jupyter-repo2docker $GITHUB_WORKSPACE/visualization-curriculum
+jupyter-repo2docker -ref $GITHIB_SHA $GITHUB_WORKSPACE/visualization-curriculum
