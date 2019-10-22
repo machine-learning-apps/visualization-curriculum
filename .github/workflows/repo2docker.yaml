@@ -10,8 +10,8 @@ jobs:
     - name: copy contents of repo
       uses: actions/checkout@master
 
-    - name: run local action
-      uses: ./action_files/
+    - name: build container
+      uses: docker://hamelsmu/repo2docker
     
     # - name: install repo2docker
     #   run: |
