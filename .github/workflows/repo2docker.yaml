@@ -1,0 +1,15 @@
+
+name: Start Jupyter Server
+on: push
+
+jobs:
+
+  host-notebook:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install repo2docker
+      run: |
+        pip3 install jupyter-repo2docker
+        
+    - name: copy contents of repo
+      uses: actions/checkout@master
