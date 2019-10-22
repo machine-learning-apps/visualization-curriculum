@@ -12,7 +12,9 @@ jobs:
     
     - name: install repo2docker
       run: |
+        ls
         sudo apt-get install python3-setuptools
         pip3 install wheel 
-        python3 -m pip install jupyter-repo2docker        
+        python3 -m pip install jupyter-repo2docker
+        python3 -m jupyter-repo2docker .      
 
