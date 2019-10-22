@@ -12,7 +12,7 @@ jobs:
 
     - name: build container
       uses: docker://hamelsmu/repo2docker
-      env:
+      with:
         DOCKER_USERNAME: {{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: {{ secrets.DOCKER_PASSWORD }}
     
