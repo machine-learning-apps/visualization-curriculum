@@ -14,7 +14,5 @@ jobs:
       run: |
         sudo apt-get install python3-setuptools
         pip3 install wheel 
-        pip3 install jupyter-repo2docker
-        jupyter-repo2docker visualization-curriculum/
-        
+        python3 -m pip install jupyter-repo2docker        
 
