@@ -16,4 +16,4 @@ jobs:
         sudo apt-get install python3-setuptools
         pip3 install wheel 
         python3 -m pip install jupyter-repo2docker
-        jupyter-repo2docker -h
+        ls  ~/.local/bin/
