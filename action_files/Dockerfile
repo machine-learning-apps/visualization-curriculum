@@ -1,6 +1,7 @@
 FROM python:3.7-alpine
 
 RUN apk add docker
+RUN apk add --no-cache git
 
 RUN pip install jupyter-repo2docker
 COPY action_files/entrypoint.sh /action_files/
