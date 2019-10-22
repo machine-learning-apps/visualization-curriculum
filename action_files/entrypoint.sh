@@ -8,3 +8,5 @@ ls $GITHUB_WORKSPACE
 
 cmd="jupyter-repo2docker --no-build --push hamelsmu/viz-notebook:${GITHUB_SHA} $GITHUB_WORKSPACE"
 echo "repo2docker command: $cmd"
+
+eval $cmd
