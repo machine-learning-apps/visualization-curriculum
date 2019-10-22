@@ -13,8 +13,8 @@ jobs:
     - name: build container
       uses: docker://hamelsmu/repo2docker
       env:
-        DOCKER_USERNAME: {{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: {{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     
     # - name: install repo2docker
     #   run: |

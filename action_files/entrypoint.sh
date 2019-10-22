@@ -2,7 +2,7 @@
 # see https://repo2docker.readthedocs.io/en/latest/usage.html
 
 
-echo ${INPUT_DOCKER_PASSWORD} | docker login -u $INPUT_DOCKER_USERNAME --password-stdin
+echo ${DOCKER_PASSWORD} | docker login -u $DOCKER_USERNAME --password-stdin
 
 ls $GITHUB_WORKSPACE
 
