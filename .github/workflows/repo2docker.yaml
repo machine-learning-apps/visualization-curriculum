@@ -1,0 +1,26 @@
+
+name: Start Jupyter Server
+on: push
+
+jobs:
+
+  host-notebook:
+    runs-on: ubuntu-latest
+    steps:
+    - name: copy contents of repo
+      uses: actions/checkout@master
+
+    - name: build container
+      uses: docker://hamelsmu/repo2docker
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+    
+    # - name: install repo2docker
+    #   run: |
+    #     ls
+    #     sudo apt-get install python3-setuptools
+    #     pip install wheel
+    #     pip3 install wheel 
+    #     sudo -H pip3 install jupyter-repo2docker
+    #     ~/.local/bin/jupyter-repo2docker --ref $GITHUB_SHA .
